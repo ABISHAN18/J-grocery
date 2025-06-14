@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>j-Grocery - Home</title>
+    <link rel="stylesheet" type="text/css" href="slider.css">
+    <style>
+        /* Basic inline styles for better presentation */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f0f8f0;
+        }
+        .hero h1 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        .mySlides {
+            display: none;
+        }
+        .fade {
+            animation: fade 1.5s ease-in-out;
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        .text {
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Products</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1 id="main">Welcome to j-Grocery Online</h1>
+            <h1>Fresh Groceries Delivered to Your Door</h1>
+            <p>Order your favorite groceries online and get them delivered right to your doorstep.</p>
+            <a href="shop.html" class="btn">Shop Now</a>
+        </section>
+    </main>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Images/1.jpg" style="width:100%">
+            <div class="text">j-Grocery</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="Images/2.jpg" style="width:100%">
+            <div class="text">j-Grocery</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="Images/3.jpg" style="width:100%">
+            <div class="text">j-Grocery</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 j-Grocery. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript connections -->
+     
+    <script src="slider.js"></script>
+    <script src="cartCounter.js"></script>
+    
+</body>
+</html>

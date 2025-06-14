@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shopping - j-Grocery</title>
+    <link rel="stylesheet" href="newStyle.css">
+    <style>
+        /* Navigation styling */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Use flexbox for horizontal alignment */
+            justify-content: center; /* Center the nav items */
+            gap: 20px; /* Space between items */
+        }
+        nav li {
+            margin: 0; /* Remove default margins */
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px; /* Add some padding for better click area */
+        }
+        nav a:hover {
+            color: #4CAF50; /* Hover effect */
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Product container styling */
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .add-to-cart {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .add-to-cart:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Products</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+        <h1>j-Grocery Shopping</h1>
+    </header>
+    <main>
+        <section class="products-container">
+            <div class="product" data-id="Rice" data-price="200">
+                <img src="images/rice.jpg" alt="Rice">
+                <h3>Rice</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Biscuit" data-price="200">
+                <img src="images/biscuit.jpeg" alt="Biscuit">
+                <h3>Biscuit</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Dhal" data-price="200">
+                <img src="images/dhal.jpeg" alt="Dhal">
+                <h3>Dhal</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Chicken" data-price="200">
+                <img src="images/chicken.jpg" alt="Chicken">
+                <h3>Chicken</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Dairy" data-price="200">
+                <img src="images/diary.jpeg" alt="Dairy">
+                <h3>Dairy</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Rice" data-price="200">
+                <img src="images/rice.jpg" alt="Rice">
+                <h3>Rice</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Biscuit" data-price="200">
+                <img src="images/biscuit.jpeg" alt="Biscuit">
+                <h3>Biscuit</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Dhal" data-price="200">
+                <img src="images/dhal.jpeg" alt="Dhal">
+                <h3>Dhal</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Chicken" data-price="200">
+                <img src="images/chicken.jpg" alt="Chicken">
+                <h3>Chicken</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Dairy" data-price="200">
+                <img src="images/diary.jpeg" alt="Dairy">
+                <h3>Dairy</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Rice" data-price="200">
+                <img src="images/rice.jpg" alt="Rice">
+                <h3>Rice</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Biscuit" data-price="200">
+                <img src="images/biscuit.jpeg" alt="Biscuit">
+                <h3>Biscuit</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Dhal" data-price="200">
+                <img src="images/dhal.jpeg" alt="Dhal">
+                <h3>Dhal</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Chicken" data-price="200">
+                <img src="images/chicken.jpg" alt="Chicken">
+                <h3>Chicken</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Dairy" data-price="200">
+                <img src="images/diary.jpeg" alt="Dairy">
+                <h3>Dairy</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Rice" data-price="200">
+                <img src="images/rice.jpg" alt="Rice">
+                <h3>Rice</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Biscuit" data-price="200">
+                <img src="images/chilli-pow.jpg" alt="Biscuit">
+                <h3>Biscuit</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Dhal" data-price="200">
+                <img src="images/honey.jpeg" alt="Dhal">
+                <h3>Dhal</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Chicken" data-price="200">
+                <img src="images/oil.jpeg" alt="Chicken">
+                <h3>Chicken</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Dairy" data-price="200">
+                <img src="images/plums.jpeg" alt="Dairy">
+                <h3>Dairy</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Biscuit" data-price="200">
+                <img src="images/powder.jpeg" alt="Biscuit">
+                <h3>Biscuit</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Dhal" data-price="200">
+                <img src="images/jam.jpg" alt="Dhal">
+                <h3>Dhal</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Chicken" data-price="200">
+                <img src="images/chips.jpeg" alt="Chicken">
+                <h3>Chicken</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Dairy" data-price="200">
+                <img src="images/salt.jpeg" alt="Dairy">
+                <h3>Dairy</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Chicken" data-price="200">
+                <img src="images/chicken.jpg" alt="Chicken">
+                <h3>Chicken</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Dairy" data-price="200">
+                <img src="images/diary.jpeg" alt="Dairy">
+                <h3>Dairy</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Rice" data-price="200">
+                <img src="images/rice.jpg" alt="Rice">
+                <h3>Rice</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="Biscuit" data-price="200">
+                <img src="images/biscuit.jpeg" alt="Biscuit">
+                <h3>Biscuit</h3>
+                <p>Rs.200/kg</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 j-Grocery. All rights reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

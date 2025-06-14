@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - j-Grocery</title>
+    <link rel="stylesheet" href="newStyle.css">
+    <style>
+        /* Navigation styling */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .cart-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-total {
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        #checkout {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        #checkout:hover {
+            background-color: #45a049;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        .btn:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Products</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+        <h1>j-Grocery Cart</h1>
+    </header>
+    <main>
+        <section class="cart-container">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">Total: Rs. <span id="cart-total">0.00</span></div>
+            <button id="checkout">Checkout</button>
+            <a href="shop.html" class="btn">Continue Shopping</a>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 j-Grocery. All rights reserved.</p>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>
