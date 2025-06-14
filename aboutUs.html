@@ -14,47 +14,63 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            background: linear-gradient(90deg, #2e7d32, #66bb6a);
+            padding: 10px 0;
+        }
+        nav li {
+            margin: 0;
         }
         nav a {
             text-decoration: none;
-            color: #333;
+            color: white;
             font-weight: bold;
-            padding: 10px;
+            padding: 10px 15px;
+            transition: color 0.3s;
         }
         nav a:hover {
-            color: #4CAF50;
+            color: #ffeb3b;
         }
         header {
-            background-color: #f8f8f8;
-            padding: 10px 0;
+            background: url('https://www.gwi.com/hubfs/1803_FEATURE%20IMG_Online%20Grocery%20Shopping%20Trends.png') no-repeat center/cover;
+            padding: 50px 0;
             text-align: center;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
         /* About section styling */
         .about-container {
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
         .about-container h2 {
-            color: #333;
+            color: #2e7d32;
             margin-bottom: 20px;
         }
         .about-container p {
             line-height: 1.6;
             color: #666;
+            margin-bottom: 15px;
         }
         /* Contact section styling */
         .contact-container {
             max-width: 800px;
             margin: 0 auto 40px;
             padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             background-color: #f0f8f0;
-            border-radius: 5px;
         }
         .contact-container h2 {
-            color: #333;
+            color: #2e7d32;
             margin-bottom: 20px;
         }
         .contact-container p {
@@ -62,8 +78,9 @@
             color: #666;
         }
         .contact-container a {
-            color: #4CAF50;
+            color: #2e7d32;
             text-decoration: none;
+            font-weight: bold;
         }
         .contact-container a:hover {
             text-decoration: underline;
@@ -71,10 +88,20 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #f8f8f8;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            background: linear-gradient(90deg, #2e7d32, #66bb6a);
+            color: white;
+            margin-top: auto;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: url('') no-repeat center/cover fixed;
+            font-family: Arial, sans-serif;
+        }
+        main {
+            flex: 1 0 auto;
         }
     </style>
 </head>
@@ -84,7 +111,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
                 <li><a href="aboutUs.html">About Us</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="register.html">Register</a></li>
@@ -106,7 +133,7 @@
             <h2>Contact Us</h2>
             <p><strong>Address:</strong> Stanly road, Jaffna</p>
             <p><strong>Email:</strong> <a href="mailto:support@jgrocery.com">support@jgrocery.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+1234567890">0765426985</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+94765426985">0765426985</a></p>
             <p><strong>Business Hours:</strong> Monday - Saturday, 8:00 AM - 6:00 PM</p>
             <p>Have a question or need assistance? Feel free to reach out—we’re here to help!</p>
         </section>

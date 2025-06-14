@@ -2,6 +2,7 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const cartItems = document.getElementById('cart-items');
 const cartTotal = document.getElementById('cart-total');
+const cartCount = document.getElementById('cart-count');
 const checkoutBtn = document.getElementById('checkout');
 
 function updateCart() {
@@ -21,6 +22,12 @@ function updateCart() {
     });
 
     cartTotal.textContent = total.toFixed(2);
+    updateCartCount();
+}
+
+function updateCartCount() {
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCount.textContent = totalItems;
 }
 
 function removeItem(index) {
@@ -42,3 +49,9 @@ checkoutBtn.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', updateCart);
+
+// Listen for storage changes from other pages
+window.addEventListener('storage', () => {
+    cart = JSON.parse(localStorage.getItem('cart')) || [];
+    updateCart();
+});

@@ -6,57 +6,92 @@
     <title>j-Grocery - Home</title>
     <link rel="stylesheet" type="text/css" href="slider.css">
     <style>
-        /* Basic inline styles for better presentation */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #f8f8f8;
-            padding: 10px 0;
-        }
+        /* Navigation styling */
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
             display: flex;
             justify-content: center;
             gap: 20px;
+            background: linear-gradient(90deg, #2e7d32, #66bb6a);
+            padding: 10px 0;
+        }
+        nav li {
+            margin: 0;
         }
         nav a {
             text-decoration: none;
-            color: #333;
+            color: white;
             font-weight: bold;
+            padding: 10px 15px;
+            transition: color 0.3s;
         }
         nav a:hover {
-            color: #4CAF50;
+            color: #ffeb3b;
         }
+        header {
+            background: url('https://www.gwi.com/hubfs/1803_FEATURE%20IMG_Online%20Grocery%20Shopping%20Trends.png') no-repeat center/cover;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            height: 150px;
+        }
+        /* Hero section styling */
         .hero {
             text-align: center;
-            padding: 40px 20px;
-            background-color: #f0f8f0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 10px auto;
+            max-width: 800px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .hero h1 {
-            margin: 10px 0;
-            color: #333;
+            margin: 5px 0;
+            color: #2e7d32;
+            font-size: 1.5em;
+        }
+        .hero p {
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 1em;
         }
         .btn {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
+            padding: 10px 15px;
+            background: linear-gradient(45deg, #2e7d32, #66bb6a);
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            font-size: 1em;
         }
         .btn:hover {
-            background-color: #45a049;
+            background: linear-gradient(45deg, #1b5e20, #4caf50);
         }
+        /* Slideshow container styling */
         .slideshow-container {
             max-width: 1000px;
             position: relative;
-            margin: auto;
+            margin: 10px auto;
+            height: 300px; /* Fixed height for no scrolling */
+            overflow: hidden;
         }
         .mySlides {
             display: none;
+            height: 100%;
+        }
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures images scale proportionally */
         }
         .fade {
             animation: fade 1.5s ease-in-out;
@@ -72,15 +107,35 @@
             text-align: center;
             color: white;
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
+            padding: 5px;
+            font-size: 1em;
         }
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #f8f8f8;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 10px;
+            background: linear-gradient(90deg, #2e7d32, #66bb6a);
+            color: white;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh; /* Minimum height to ensure footer is visible */
+            display: flex;
+            flex-direction: column;
+            background: url('') no-repeat center/cover fixed;
+            font-family: Arial, sans-serif;
+            /* Removed overflow: hidden to allow footer visibility */
+        }
+        main {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            height: calc(100vh - 200px); /* Adjust to fit header (150px) and footer (50px) */
         }
     </style>
 </head>
@@ -104,31 +159,29 @@
             <p>Order your favorite groceries online and get them delivered right to your doorstep.</p>
             <a href="shop.html" class="btn">Shop Now</a>
         </section>
-    </main>
 
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="Images/1.jpg" style="width:100%">
-            <div class="text">j-Grocery</div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="Images/1.jpg" style="width:100%; height:100%;">
+                <div class="text">j-Grocery</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="Images/2.jpg" style="width:100%; height:100%;">
+                <div class="text">j-Grocery</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="Images/3.jpg" style="width:100%; height:100%;">
+                <div class="text">j-Grocery</div>
+            </div>
         </div>
-        <div class="mySlides fade">
-            <img src="Images/2.jpg" style="width:100%">
-            <div class="text">j-Grocery</div>
-        </div>
-        <div class="mySlides fade">
-            <img src="Images/3.jpg" style="width:100%">
-            <div class="text">j-Grocery</div>
-        </div>
-    </div>
+    </main>
 
     <footer>
         <p>© 2024 j-Grocery. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript connections -->
-     
     <script src="slider.js"></script>
     <script src="cartCounter.js"></script>
-    
 </body>
 </html>

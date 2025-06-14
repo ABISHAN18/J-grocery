@@ -14,33 +14,43 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            background: linear-gradient(90deg, #2e7d32, #66bb6a);
+            padding: 10px 0;
+        }
+        nav li {
+            margin: 0;
         }
         nav a {
             text-decoration: none;
-            color: #333;
+            color: white;
             font-weight: bold;
-            padding: 10px;
+            padding: 10px 15px;
+            transition: color 0.3s;
         }
         nav a:hover {
-            color: #4CAF50;
+            color: #ffeb3b;
         }
         header {
-            background-color: #f8f8f8;
-            padding: 10px 0;
+            background: url('https://www.gwi.com/hubfs/1803_FEATURE%20IMG_Online%20Grocery%20Shopping%20Trends.png') no-repeat center/cover;
+            padding: 50px 0;
             text-align: center;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
         /* Login form styling */
         .login-container {
             max-width: 400px;
             margin: 40px auto;
             padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         .login-container h2 {
             text-align: center;
             margin-bottom: 20px;
+            color: #2e7d32;
         }
         .form-group {
             margin-bottom: 15px;
@@ -48,30 +58,38 @@
         .form-group label {
             display: block;
             margin-bottom: 5px;
+            color: #666;
         }
         .form-group input {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
         }
         .btn {
-            background-color: #4CAF50;
+            background: linear-gradient(45deg, #2e7d32, #66bb6a);
             color: white;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
             width: 100%;
+            font-weight: bold;
+            transition: background 0.3s;
         }
         .btn:hover {
-            background-color: #45a049;
+            background: linear-gradient(45deg, #1b5e20, #4caf50);
         }
         .register-link {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 15px;
         }
         .register-link a {
-            color: #4CAF50;
+            color: #2e7d32;
             text-decoration: none;
+            font-weight: bold;
         }
         .register-link a:hover {
             text-decoration: underline;
@@ -79,10 +97,20 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #f8f8f8;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            background: linear-gradient(90deg, #2e7d32, #66bb6a);
+            color: white;
+            margin-top: auto;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: url('') no-repeat center/cover fixed;
+            font-family: Arial, sans-serif;
+        }
+        main {
+            flex: 1 0 auto;
         }
     </style>
 </head>
